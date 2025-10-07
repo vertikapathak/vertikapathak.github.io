@@ -115,9 +115,12 @@
 
         .artwork-caption { text-align: center; margin-top: 0.75rem; font-size: 0.9rem; color: var(--secondary-text); font-weight: 600; }
         
-        @media (max-width: 768px) {
+       @media (max-width: 768px) {
             .hero h1 { font-size: 3rem; /* Make title smaller on mobile */ }
-            .hero { background-attachment: scroll; /* Parallax can be jerky on mobile, so we disable it */ }
+            .hero {
+                background-attachment: scroll; /* Parallax can be jerky on mobile, so we disable it */
+<span style="color: red;">                min-height: 60vh; /* ADDED: Ensures enough height on mobile for the image */</span>
+            }
         }
     </style>
 </head>
@@ -329,6 +332,7 @@ human heart is shrinking...
 </body>
 
 </html>
+
 
 
 
