@@ -94,7 +94,7 @@
         .timeline-item { padding-bottom: 2rem; border-left: 2px solid var(--surface-color); position: relative; padding-left: 2rem; }
         .timeline-item::before { content: ''; width: 12px; height: 12px; background: var(--accent-color); border: 2px solid var(--bg-color); border-radius: 50%; position: absolute; left: -8px; top: 5px; }
         .timeline-item h3 { font-size: 1.4rem; }
-        .timeline-item p { margin: 0; color: var(--secondary-text); }
+        .timeline-item h3 .honor { font-size: 0.85em; /* slightly smaller than surrounding h3 text */ font-weight: 600; color: var(--secondary-text); margin-left: 0.25rem; }
         .artwork-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
         .artwork-item a { display: block; overflow: hidden; border-radius: 8px; position: relative; }
         .artwork-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; background-color: #333; }
@@ -173,7 +173,7 @@
             <h2>Academics</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Ph.D. in Medical Sciences (Magna Cum Laude)</h3>
+                    <h3>Ph.D. in Medical Sciences <span class="honor">(Magna Cum Laude)</span></h3>
                     <p>RWTH Aachen University, 2016 - 2020</p>
                     <p><a href="https://publications.rwth-aachen.de/record/848664/files/848664.pdf" target="_blank"><em>Thesis: "Polymeric microbubbles for multimodal molecular imaging and drug delivery"</em></a></p>
                 </div>
@@ -328,5 +328,6 @@ human heart is shrinking...
 
 </body>
 </html>
+
 
 
