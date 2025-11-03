@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,10 +53,11 @@
             align-items: center;
             text-align: center;
             color: white;
+            /* --- MAKE SURE THIS PATH IS CORRECT --- */
             background-image: url('images/your-banner-photo.jpg'); 
             background-size: cover;
-            background-position: center center; /* Or 'left center', etc. - adjusted to 'center center' for better general fit */
-            background-attachment: fixed; /* Creates the parallax scrolling effect */
+            background-position: center center;
+            background-attachment: fixed; /* Creates the parallax scrolling effect for DESKTOP */
         }
         .hero::before {
             content: '';
@@ -75,7 +76,7 @@
         .hero h1 { font-size: 4.5rem; }
         .hero p { 
             font-size: 1.4rem; 
-            color: var(--primary-text); /* Changed for better visibility */
+            color: var(--primary-text);
             font-family: var(--body-font); 
             font-weight: 400; 
             font-style: italic;
@@ -93,7 +94,7 @@
         .timeline-item { padding-bottom: 2rem; border-left: 2px solid var(--surface-color); position: relative; padding-left: 2rem; }
         .timeline-item::before { content: ''; width: 12px; height: 12px; background: var(--accent-color); border: 2px solid var(--bg-color); border-radius: 50%; position: absolute; left: -8px; top: 5px; }
         .timeline-item h3 { font-size: 1.4rem; }
-        .timeline-item h3 .honor { font-size: 0.85em; /* slightly smaller than surrounding h3 text */ font-weight: 600; color: var(--secondary-text); margin-left: 0.25rem; }
+        .timeline-item h3 .honor { font-size: 0.85em; font-weight: 600; color: var(--secondary-text); margin-left: 0.25rem; }
         .artwork-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
         .artwork-item a { display: block; overflow: hidden; border-radius: 8px; position: relative; }
         .artwork-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; background-color: #333; }
@@ -114,10 +115,14 @@
 
         .artwork-caption { text-align: center; margin-top: 0.75rem; font-size: 0.9rem; color: var(--secondary-text); font-weight: 600; }
         
+        /* --- MOBILE STYLES --- */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; /* Make title smaller on mobile */ }
-            .hero {  background-position: center top; 
-    }
+            .hero h1 { font-size: 3rem; }
+            .hero {  
+                background-position: center top; 
+                background-attachment: scroll; /* THIS FIXES THE IMAGE ON MOBILE */
+            }
+        }
     </style>
 </head>
 <body>
@@ -135,9 +140,9 @@
         </div>
     </nav>
 
+    <!-- THE UNNECESSARY IMG TAG HAS BEEN REMOVED FROM HERE -->
     <header class="hero">
-       <img src="images/your-banner-photo.jpg" alt="A banner photo of Vertika Pathak" class="hero-background-image">
-    <div class="container hero-content">
+        <div class="container hero-content">
             <h1>Vertika Pathak, PhD</h1>
             <p>Exploring the intersection of Logic and Art</p>
         </div>
@@ -326,15 +331,3 @@ human heart is shrinking...
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
